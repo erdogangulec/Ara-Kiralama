@@ -61,7 +61,7 @@ namespace Araç_Kiralama
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Gold;
+            this.button7.BackColor = System.Drawing.Color.Red;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button7.ImageKey = "2017604-200.png";
             this.button7.ImageList = this.ımageList1;
@@ -114,6 +114,7 @@ namespace Araç_Kiralama
             this.button5.Text = "Araç Listeleme";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 

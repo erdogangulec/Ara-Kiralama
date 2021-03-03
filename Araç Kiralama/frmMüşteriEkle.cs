@@ -38,5 +38,10 @@ namespace Araç_Kiralama
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
                 
         }
+
+        private void frmMüşteriEkle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -193,6 +193,7 @@ namespace Araç_Kiralama
             this.Name = "frmMüşteriEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Müşteri ekleme Sayfası";
+            this.Load += new System.EventHandler(this.frmMüşteriEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

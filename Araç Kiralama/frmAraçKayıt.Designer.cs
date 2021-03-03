@@ -47,7 +47,7 @@ namespace Araç_Kiralama
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.brmResim = new System.Windows.Forms.Button();
+            this.btnResim = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -198,20 +198,20 @@ namespace Araç_Kiralama
             this.label8.TabIndex = 15;
             this.label8.Text = "Kira Ücreti";
             // 
-            // brmResim
+            // btnResim
             // 
-            this.brmResim.BackColor = System.Drawing.Color.Gold;
-            this.brmResim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.brmResim.ImageIndex = 2;
-            this.brmResim.ImageList = this.ımageList1;
-            this.brmResim.Location = new System.Drawing.Point(512, 278);
-            this.brmResim.Name = "brmResim";
-            this.brmResim.Size = new System.Drawing.Size(180, 39);
-            this.brmResim.TabIndex = 17;
-            this.brmResim.Text = "Resim Ekle";
-            this.brmResim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.brmResim.UseVisualStyleBackColor = false;
-            this.brmResim.Click += new System.EventHandler(this.button1_Click);
+            this.btnResim.BackColor = System.Drawing.Color.Gold;
+            this.btnResim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResim.ImageIndex = 2;
+            this.btnResim.ImageList = this.ımageList1;
+            this.btnResim.Location = new System.Drawing.Point(512, 278);
+            this.btnResim.Name = "btnResim";
+            this.btnResim.Size = new System.Drawing.Size(180, 39);
+            this.btnResim.TabIndex = 17;
+            this.btnResim.Text = "Resim Ekle";
+            this.btnResim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnResim.UseVisualStyleBackColor = false;
+            this.btnResim.Click += new System.EventHandler(this.button1_Click);
             // 
             // ımageList1
             // 
@@ -272,7 +272,7 @@ namespace Araç_Kiralama
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.brmResim);
+            this.Controls.Add(this.btnResim);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -293,6 +293,7 @@ namespace Araç_Kiralama
             this.Name = "frmAraçKayıt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Araç Kayıt Sayfası";
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -318,7 +319,7 @@ namespace Araç_Kiralama
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button brmResim;
+        private System.Windows.Forms.Button btnResim;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ImageList ımageList1;

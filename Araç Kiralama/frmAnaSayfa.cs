@@ -44,5 +44,11 @@ namespace Araç_Kiralama
             frmAraçKayıt kayıt = new frmAraçKayıt();
             kayıt.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmAraçListele listele = new frmAraçListele();
+            listele.ShowDialog();
+        }
     }
 }

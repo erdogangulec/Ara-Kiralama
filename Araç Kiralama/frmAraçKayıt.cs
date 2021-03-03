@@ -75,7 +75,7 @@ namespace Araç_Kiralama
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string cümle = "insert inti araç(plaka,marka,seri,yil,renk,km,yakit,kiraucreti,resim,tarih,durumu) values(@plaka,@marka,@seri,@yil,@renk,@km,@yakit,@kiraucreti,@resim,@tarih,@durumu)";            
+            string cümle = "insert into araç(plaka,marka,seri,yil,renk,km,yakit,kiraucreti,resim,tarih,durumu) values(@plaka,@marka,@seri,@yil,@renk,@km,@yakit,@kiraucreti,@resim,@tarih,@durumu)";            
             SqlCommand komut2 = new SqlCommand();
             komut2.Parameters.AddWithValue("@plaka", Plakatxt.Text);
             komut2.Parameters.AddWithValue("@marka", Markacombo.Text);
@@ -92,6 +92,8 @@ namespace Araç_Kiralama
             Sericombo.Items.Clear();
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
             foreach (Control item in Controls) if (item is ComboBox) item.Text = "";
+            pictureBox1.ImageLocation = "";
         }
+       
     }
 }

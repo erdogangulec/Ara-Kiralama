@@ -59,6 +59,12 @@
     <Compile Include="frmAraçKayıt.Designer.cs">
       <DependentUpon>frmAraçKayıt.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAraçListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAraçListele.Designer.cs">
+      <DependentUpon>frmAraçListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMüşteriEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAraçKayıt.resx">
       <DependentUpon>frmAraçKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAraçListele.resx">
+      <DependentUpon>frmAraçListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMüşteriEkle.resx">
       <DependentUpon>frmMüşteriEkle.cs</DependentUpon>

@@ -40,7 +40,7 @@ namespace Araç_Kiralama
         private void btnSil_Click(object sender, EventArgs e)
         {
             DataGridViewRow satır = dataGridView1.CurrentRow;
-            string cümle = "delete from müşteri where tc='"+satır.Cells["tc"].Value.ToString()+"'";
+            string cümle = "delete from müşteri where tc='" + satır.Cells["tc"].Value.ToString() + "'";
             SqlCommand komut2 = new SqlCommand();
             arackiralama.ekle_sil_güncelle(komut2, cümle);
             //foreach (Control item in Controls) if (item is TextBox) item.Text = "";
@@ -49,9 +49,9 @@ namespace Araç_Kiralama
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string cümle = "select *from müşteri where tc like'%"+textBox1.Text+"%'";
+            string cümle = "select *from müşteri where tc like'%" + textBox1.Text + "%'";
             SqlDataAdapter adtr2 = new SqlDataAdapter();
-            
+
             dataGridView1.DataSource = arackiralama.listele(adtr2, cümle);
         }
 
@@ -87,3 +87,4 @@ namespace Araç_Kiralama
         }
     }
 }
+

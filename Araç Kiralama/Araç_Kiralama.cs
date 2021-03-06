@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Araç_Kiralama
 {
@@ -28,5 +30,46 @@ namespace Araç_Kiralama
             baglanti.Close();
             return tablo;
         }
+        public void Boş_Araçlar(ComboBox combo,string sorgu)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(sorgu,baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                combo.Items.Add(read["plaka"].ToString());
+            }
+            baglanti.Close();
+        }
+        public void TC_Ara(TextBox tc,TextBox adsoyad,TextBox telefon, string sorgu)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(sorgu, baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                adsoyad.Text = read["adsoyad"].ToString();
+                telefon.Text = read["telefon"].ToString();
+
+            }
+            baglanti.Close();
+        }
+        public void CombodanGetir(ComboBox araclar, TextBox marka, TextBox seri, TextBox yil, TextBox renk, string sorgu)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(sorgu, baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                marka.Text = read["marka"].ToString();
+                seri.Text = read["seri"].ToString();
+                yil.Text = read["yil"].ToString();
+                renk.Text = read["renk"].ToString();               
+            }
+            baglanti.Close();
+        }
+
+
+
     }
 }

@@ -50,5 +50,11 @@ namespace Araç_Kiralama
             frmAraçListele listele = new frmAraçListele();
             listele.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmSözleşme sözleşme = new frmSözleşme();
+            sözleşme.ShowDialog();
+        }
     }
 }

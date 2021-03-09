@@ -69,6 +69,8 @@ namespace Araç_Kiralama
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAraçTeslim = new System.Windows.Forms.Button();
+            this.btnHesapla = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -90,7 +92,7 @@ namespace Araç_Kiralama
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(424, 242);
+            this.groupBox1.Size = new System.Drawing.Size(424, 278);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MüşteriBilgileri";
@@ -194,6 +196,8 @@ namespace Araç_Kiralama
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnTemizle);
+            this.groupBox2.Controls.Add(this.btnHesapla);
             this.groupBox2.Controls.Add(this.btnGüncelle);
             this.groupBox2.Controls.Add(this.btnEkle);
             this.groupBox2.Controls.Add(this.dateDönüş);
@@ -220,7 +224,7 @@ namespace Araç_Kiralama
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(560, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(575, 242);
+            this.groupBox2.Size = new System.Drawing.Size(687, 278);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Araç Bilgileri";
@@ -242,6 +246,7 @@ namespace Araç_Kiralama
             this.btnEkle.TabIndex = 22;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // dateDönüş
             // 
@@ -313,10 +318,11 @@ namespace Araç_Kiralama
             "Günlük",
             "Haftalık",
             "Aylık"});
-            this.comboKiraŞekli.Location = new System.Drawing.Point(385, 41);
+            this.comboKiraŞekli.Location = new System.Drawing.Point(385, 39);
             this.comboKiraŞekli.Name = "comboKiraŞekli";
             this.comboKiraŞekli.Size = new System.Drawing.Size(142, 24);
             this.comboKiraŞekli.TabIndex = 12;
+            this.comboKiraŞekli.SelectedIndexChanged += new System.EventHandler(this.comboKiraŞekli_SelectedIndexChanged);
             // 
             // comboAraçlar
             // 
@@ -430,7 +436,7 @@ namespace Araç_Kiralama
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 292);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 350);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -446,12 +452,32 @@ namespace Araç_Kiralama
             this.btnAraçTeslim.Text = "Araç Teslim";
             this.btnAraçTeslim.UseVisualStyleBackColor = true;
             // 
+            // btnHesapla
+            // 
+            this.btnHesapla.Location = new System.Drawing.Point(544, 44);
+            this.btnHesapla.Name = "btnHesapla";
+            this.btnHesapla.Size = new System.Drawing.Size(124, 159);
+            this.btnHesapla.TabIndex = 24;
+            this.btnHesapla.Text = "Hesapla";
+            this.btnHesapla.UseVisualStyleBackColor = true;
+            this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(385, 226);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(106, 33);
+            this.btnTemizle.TabIndex = 25;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
             // frmSözleşme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1542, 672);
+            this.ClientSize = new System.Drawing.Size(1542, 708);
             this.Controls.Add(this.btnAraçTeslim);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
@@ -511,5 +537,7 @@ namespace Araç_Kiralama
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAraçTeslim;
+        private System.Windows.Forms.Button btnHesapla;
+        private System.Windows.Forms.Button btnTemizle;
     }
 }
